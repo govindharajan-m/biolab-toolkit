@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BioLab Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <h1>BioLab Toolkit</h1>
+        <p class="subtitle">
+    A minimal web-based toolkit for DNA sequence analysis, primer design, and restriction digestion simulation.
+</p>
+<p class="author">
+    Developed by Govindharajan Mukund, B.Tech Industrial Biotechnology
+</p>
+        </p>
+
+        <div class="card about-card">
+            <p>
+                BioLab Toolkit is an educational in-silico molecular biology utility designed to demonstrate
+                core sequence-level bioinformatics concepts, including nucleotide composition analysis,
+                PCR primer design, mutation simulation, and restriction enzyme digestion prediction.
+            </p>
+        </div>
+
+        <div class="main-grid">
+            
+            <!-- LEFT COLUMN -->
+            <div class="left-column">
+                <div class="card">
+                    <h2>DNA Sequence Input</h2>
+                    <textarea id="dnaInput" placeholder="Paste DNA or FASTA sequence here, for example:
+>Gene_X
+ATGGAATTCTAGGAATTCG
+"></textarea>
+                    <p class="hint">Supports raw DNA or FASTA format.</p>
+                </div>
+
+                <div class="card output-card">
+                    <h2>Output</h2>
+                    <div id="outputBox">Results will appear here...</div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="right-column">
+                <div class="card">
+                    <h2>Sequence Analysis</h2>
+                    <p class="section-desc">
+                        Basic nucleotide composition analysis and sequence transformation utilities.
+                    </p>
+                    <div class="button-group">
+                        <button onclick="sequenceStats()">Sequence Stats</button>
+                        <button onclick="calculateGC()">GC Content</button>
+                        <button onclick="reverseComplement()">Reverse Complement</button>
+                        <button onclick="transcribeDNA()">Transcribe to RNA</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>PCR & Primer Design</h2>
+                    <p class="section-desc">
+                        Design basic PCR primers, estimate melting temperature, and simulate point mutations.
+                    </p>
+                    <div class="button-group">
+                        <button onclick="designPrimers()">Design PCR Primers</button>
+                        <button onclick="mutateSequence()">Mutate Sequence</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Restriction Digest</h2>
+                    <p class="section-desc">
+                        Predict DNA fragment sizes based on restriction enzyme recognition sites.
+                    </p>
+                    <div class="button-group">
+                        <button onclick="simulateDigestion()">Simulate Restriction Digest</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>
+                Developed for educational in-silico molecular biology analysis. Experimental validation is required for laboratory applications.
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
