@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta charset="UTF-8">
     <title>BioLab Toolkit</title>
     <link rel="icon" type="image/svg+xml" href="dna.svg">
     <link rel="stylesheet" href="style.css">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <body>
     <div class="app">
         <h1>BioLab Toolkit</h1>
@@ -15,6 +17,8 @@
 <p class="author">
     Developed by Govindharajan Mukund, B.Tech Industrial Biotechnology
 </p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
         </p>
 
         <div class="card about-card">
@@ -52,10 +56,19 @@ ATGGAATTCTAGGAATTCG
                         Basic nucleotide composition analysis and sequence transformation utilities.
                     </p>
                     <div class="button-group">
+                        <button onclick="runFullAnalysis()">Run Full Analysis</button>
                         <button onclick="sequenceStats()">Sequence Stats</button>
                         <button onclick="calculateGC()">GC Content</button>
-                        <button onclick="reverseComplement()">Reverse Complement</button>
+                        <button onclick="reverseComplementDNA()">Reverse Complement</button>
                         <button onclick="transcribeDNA()">Transcribe to RNA</button>
+                        <button onclick="translateProtein()">Translate to Protein</button>
+                        <button onclick="translateFrames()">Translate (3 Frames)</button>
+                        <button onclick="translateSixFrames()">6-Frame Translation</button>
+                        <button onclick="findLongestORF()">Find Open Reading Frames</button>
+</button>
+
+                        <button onclick="codonUsageAnalysis()">Codon Usage Analysis</button>
+
                     </div>
                 </div>
 
@@ -77,7 +90,14 @@ ATGGAATTCTAGGAATTCG
                     </p>
                     <div class="button-group">
                         <button onclick="simulateDigestion()">Simulate Restriction Digest</button>
+                        <button onclick="downloadOutput()">Download Results</button>
+                        <button onclick="exportPDF()">Export Report as PDF</button>
                     </div>
+                    <div class="card">
+  <h2>ORF Length Graph</h2>
+  <canvas id="orfChart"></canvas>
+</div>
+
                 </div>
             </div>
 
@@ -89,7 +109,8 @@ ATGGAATTCTAGGAATTCG
             </p>
         </footer>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
