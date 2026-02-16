@@ -1,62 +1,127 @@
-# BioLab Toolkit
+BioLab Toolkit – DNA Sequence Analysis Web Application
 
-BioLab Toolkit is a minimal web-based molecular biology analysis utility designed for in-silico DNA sequence processing, primer design, and restriction enzyme digestion simulation. The application demonstrates core bioinformatics concepts through an interactive and educational interface.
+BioLab Toolkit is a browser-based DNA sequence analysis web application designed for biotechnology and bioinformatics students. It performs common sequence analysis tasks entirely on the client side using HTML, CSS, and JavaScript, without requiring any backend or installation.
 
----
+Live Demo
 
-## Features
+(Replace with your GitHub Pages link)
 
-- DNA sequence input with FASTA support  
-- GC content calculation  
-- Reverse complement generation  
-- DNA → RNA transcription simulation  
-- PCR primer design with GC% and Tm estimation  
-- Restriction enzyme digestion fragment prediction  
-- Sequence length and base composition analysis  
-- Point mutation simulation  
+https://your-username.github.io/biolab-toolkit/
 
----
+Features
+Sequence Analysis
 
-## Scientific Concepts Demonstrated
+GC content calculation
 
-- Nucleotide composition analysis  
-- Complementary base pairing  
-- Transcription (DNA → RNA)  
-- Primer design logic (Wallace rule for Tm estimation)  
-- Restriction endonuclease recognition and cleavage  
-- In-silico mutation modeling  
+Sequence length and nucleotide composition
 
----
+Reverse complement generation
 
-## Tech Stack
+DNA to RNA transcription
 
-- HTML  
-- CSS  
-- JavaScript (Vanilla JS)
+Protein translation using codon table
 
----
+ORF and Translation Tools
 
-## Educational Purpose
+Open Reading Frame (ORF) detection
 
-This tool is intended for educational and preliminary in-silico molecular biology analysis.  
-Experimental validation is required for laboratory applications.
+Three-frame translation
 
----
+Six-frame translation
 
-## Author
+Longest ORF prediction (forward and reverse strand)
 
-Developed by **Govindharajan Mukund**  
+Codon usage frequency analysis
+
+Visualization and Reporting
+
+ORF length bar graph using Chart.js
+
+Full sequence analysis summary
+
+Export analysis results as a PDF report
+
+Technologies Used
+
+HTML5
+
+CSS3
+
+JavaScript (Vanilla JS)
+
+Chart.js for ORF length visualization
+
+jsPDF for exporting reports as PDF
+
+Project Structure
+biolab-toolkit/
+│── index.html        # Main user interface
+│── style.css         # Styling and layout
+│── script.js         # Core sequence analysis logic
+│── README.md         # Project documentation
+
+How to Run Locally
+
+Clone the repository:
+
+git clone https://github.com/govindharajan-m/biolab-toolkit.git
+
+
+Open index.html in any modern web browser.
+
+No additional dependencies or installation steps are required.
+
+Example Input
+ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG
+
+
+The toolkit can compute:
+
+GC content percentage
+
+Detected ORFs
+
+Protein translation
+
+Longest predicted coding region
+
+Codon usage frequencies
+
+ORF length graph
+
+Exportable PDF analysis report
+
+Use Cases
+
+Undergraduate bioinformatics learning
+
+Biotechnology coursework demonstrations
+
+Basic gene and ORF exploration
+
+Quick in-browser DNA sequence analysis
+
+Future Improvements
+
+FASTA file upload support
+
+Single-letter amino acid translation option
+
+Sliding window GC content plots
+
+Motif and restriction site search
+
+Export results as CSV
+
+Author
+
+Govindharajan Mukund
 B.Tech Industrial Biotechnology
+Anna University
 
----
+License
 
-## Usage
-
-1. Paste a DNA sequence (raw or FASTA format)
-2. Choose a tool (GC content, primer design, restriction digest, etc.)
-3. View computed results instantly in the output panel
-
----
+This project is released under the MIT License
 
 ## Preview
 
