@@ -5,7 +5,6 @@ BioLab Toolkit is a browser-based DNA sequence analysis platform developed for b
 ---------------------------------------------------------------------
 
 Live Demo
-(Replace with your GitHub Pages URL)
 
 https://govindharajan-m.github.io/biolab-toolkit/
 
